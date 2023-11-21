@@ -116,18 +116,4 @@ public class PlayerStats : MonoBehaviour
         Debug.Log("PLAYER IS DEAD");
     }
 
-    public void RestoreHealth(float amount)
-    {
-        // Only heal the player if their current health is less than their maximum health
-        if (currentHealth < characterData.MaxHealth)
-        {
-            currentHealth += amount;
-
-            // Make sure the player's health doesn't exceed their maximum health
-            if (currentHealth > characterData.MaxHealth)
-            {
-                currentHealth = characterData.MaxHealth;
-            }
-        }
-    }
 }
